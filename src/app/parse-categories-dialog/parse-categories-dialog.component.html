@@ -1,0 +1,21 @@
+<div class="dialog-container" *ngIf="isDialogShown">
+  <div class="dialog-title">
+    <span>Parse Categories</span>
+  </div>
+
+  <div>
+    <label>Parse URL</label>
+    <br>
+    <input type="text" [(ngModel)]="parseUrl">
+  </div>
+
+  <div>
+    <div *ngFor="let category of parsedCategories">
+      <span>{{category.title}}</span>
+    </div>
+  </div>
+
+  <input type="button" value="Parse" (click)="parseCategories()">
+  <input type="button" value="Add" (click)="addCategory()">
+  <input type="button" value="Cancel" (click)="closeDialog()">
+</div>

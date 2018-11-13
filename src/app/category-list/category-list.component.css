@@ -1,0 +1,7 @@
+.category.thumbnail {
+    border: 1px green solid;
+}
+
+.disabled-list {
+    cursor: not-allowed;
+}

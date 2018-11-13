@@ -1,0 +1,12 @@
+<div [class.disabled-list]='listDisabled'>
+  <input type="button" (click)="showNewCategoryDialog()" value="Add Category">
+  <input type="button" (click)="showParseCategoriesDialog()" value="Parse Categories">
+  <div class="category thumbnail" *ngFor='let category of categories'>
+    <p>{{category.title}}</p>
+    <p>{{category.imgUrl}}</p>
+    <p>{{category.info}}</p>
+    <a routerLink="/category/{{category.id}}">View category</a>
+  </div>
+</div>
+<app-category-dialog (onClose)='activateList()' (onAdd)='addCategory($event)'></app-category-dialog>
+<app-parse-categories-dialog (onClose)='activateList()' (onAdd)='addCategory($event)'></app-parse-categories-dialog>

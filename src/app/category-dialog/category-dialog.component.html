@@ -1,0 +1,26 @@
+<div class="dialog-container" *ngIf="isDialogShown">
+  <div class="dialog-title">
+    <span>New Category</span>
+  </div>
+
+  <div>
+    <label>Title</label>
+    <br>
+    <input type="text" [(ngModel)]="title">
+  </div>
+
+  <div>
+    <label>Picture</label>
+    <br>
+    <input type="text" [(ngModel)]="imgUrl">
+  </div>
+
+  <div>
+    <label>Info</label>
+    <br>
+    <textarea type="text" [(ngModel)]="info"></textarea>
+  </div>
+
+  <input type="button" value="Add" (click)="addCategory()">
+  <input type="button" value="Cancel" (click)="closeDialog()">
+</div>
